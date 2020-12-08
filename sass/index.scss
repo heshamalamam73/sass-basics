@@ -1,0 +1,92 @@
+
+// install sass
+//1- install nodejs && npm
+//2- make a project folder
+//3- create index.html , sass folder => index.sass , css folder => index.css
+//4- run " npm i sass -d " in terminal
+//5- in package.js => scripts add "start" : "sass ./sass/index.scss ./css/index.css --watch"
+//6 run "npm start "
+
+
+
+
+// use partials (divide and conquer)
+@import "default";
+// use variable
+$primary-color: #eee;
+$secondary-color: white;
+$screen-height: 100vh;
+$red-color: mediumvioletred;
+//use extend
+%extend-border {
+  border-bottom: 1px solid aliceblue;
+  padding: 5px;
+}
+#hero-text {
+  @extend %extend-border;
+  color: $red-color;
+  font-size: 5em;
+}
+
+//use pseudo selector $
+#hero-text {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  &:hover {
+    color: $secondary-color;
+    font-size: 6em;
+  }
+}
+//use nested syntax
+.nav {
+  background-color: $red-color;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 10px;
+  .nav-items {
+    display: flex;
+    list-style: none;
+    li {
+      padding: 0 20px;
+      align-items: center;
+      color: $secondary-color;
+    }
+  }
+  .nav-title {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}
+//use mixins
+@mixin div_hero($prop1 ,$prop2 , $prop3) {
+  background-color: $prop1;
+  color: $prop2;
+  height: $prop3;
+  width: 100%;
+}
+.hero {
+  @include div_hero(#eee, #ffffff, $screen-height)
+}
+@mixin center_content() {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  text-align: center;
+}
+.hero {
+  .content {
+    @include center_content;
+    img {
+      width: 400px;
+      max-width: 100%;
+    }
+    p{
+      color: $red_color;
+    }
+  }
+
+}
+
