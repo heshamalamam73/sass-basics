@@ -1,52 +1,16 @@
+7 benefits of using SASS over conventional CSS
 
-1-	Include sass into un project
-•	Install nodejs && npm
-•	Npm init -y
-•	Npm I sass -d
-•	Create folder (sass ) then create file index.scss
-•	In packge.js => scripts add “start” : “sass ./sass/index.scss ./css/style.css --watch“
-•	Then open temenal in project folder and type npm start
-2-	Why sass is important and powerful then css ?
-•	You can use variable l
-By declaring variable you can use it anywhere you want in you code
-Ex (
-For making un variable =
-$primary-color : #eee;
-$secondary-color : #fefefe
-Then you can use it  =
-H1{Background-color : $ primary-color ; }
-)
-•	You can use partials
-Easy way to clean your code by include other scss files not just one file for entire project  
-o	If you want to add a partial you need to create un file’s  name start with (_ ) like “_default.scss”
-o	To import this file in index.scss you neet to type  ( @import “default” ) without the “_ “ or “.scss”
-•	You can use mixins
-You can make a mixins functions to use it more than one time
-o	To make a mixins func
+What is SASS?
+SASS (Syntactically Awesome Stylesheets) is a CSS pre-processor that lets you use variables, mathematical operations, mixins, loops, functions, imports, and other interesting functionalities that make writing CSS much more powerful. In some ways, you may think of SASS as a style sheet extension language because it extends the standard CSS characteristics by introducing the benefits of a basic programming language. So SASS will compile your code and generate the CSS output a browser can understand.
 
-@mixin div_style ($prop1 , $prop2 , $prop3 ) {
-Height : $prop2;
-Width : $prop1;
-Background-color : $prop3 ;
-}
-o	To include it
-.header {
-@include div_style(200px , 400px , black )
-// rest of style
-}
-•	You can use extend
-oTo make extend
-%extend-border{
-Border : 1px  solid #eee;
-Padding : 10px ;
-Color : #3333
-}
-oTo include it
-.nav-bar {
-@extend %extend-border ;
-}
+Yes, you just read "programming language" but it really is basic stuff. If you are a programmer, it will only take you 15 minutes to get SASS. But if you have no experience coding, then your learning curve will be a little higher. Once you learn CSS with SASS, you won't write CSS from scratch anymore.
+
+Here are seven benefits of using SASS:
 
 
+It's CSS syntax friendly ?
+If you know CSS, you know SASS. SASS comes with two different syntaxes: SASS itself and SCSS, the most used one. SCSS syntax is CSS compatible, so you just have to rename your .css file to .scss et voilà! Your first SCSS file has been created, just like that.
 
+Of course, by doing this you are not using any of the superpowers and abilities SASS provides, but at least you realize you don't need to spend hours and hours to start using SASS. From this starting point, you would be able to learn the SASS syntax as you go.
 
-by / mahmoud okily 
+Here's where you can learn about the SASS basics.
